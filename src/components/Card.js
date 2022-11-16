@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
-function Lodgment() {
+function Card() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -27,4 +27,4 @@ function Lodgment() {
   );
 }
 
-export default Lodgment;
+export default Card;

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
-import Lodgment from "../components/Lodgment";
+import Card from "../components/Card";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -9,8 +9,8 @@ function Home() {
     <div>
       <Header />
       <main>
-        <Banner />
-        <Lodgment />
+        <Banner origin="home" />
+        <Card />
       </main>
       <Footer />
     </div>
