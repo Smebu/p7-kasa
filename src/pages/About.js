@@ -12,15 +12,14 @@ function About() {
       <main>
         <Banner origin="about" />
         <section className="dropdown">
-          {aboutCollapse.map((text) => {
-            console.log(text.title, text.id, text.description);
-            <Collapse
-              origin="about"
-              title={text.title}
-              id={text.id}
-              description={text.description}
-            />;
-            console.log("toto");
+          {aboutCollapse.map((text, idx) => {
+            return (
+              <Collapse
+                title={text.title}
+                key={idx}
+                description={text.description}
+              />
+            );
           })}
         </section>
       </main>

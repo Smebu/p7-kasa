@@ -2,10 +2,10 @@
 
 .dropdown {
   width: 80%;
-  margin: 25px auto;
+  margin: 43px auto;
 }
 .dropdown_container {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .dropdown_trigger {
   display: flex;
@@ -35,6 +35,9 @@
 }
 .dropdown_body {
   opacity: 0;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
 }
 .dropdown_body_anim {
   font-family: "Montserrat";
@@ -44,9 +47,27 @@
   background: #f7f7f7;
   border-radius: 5px;
   line-height: 34px;
-  padding: 15px;
+  padding: 20px;
   pointer-events: none;
   height: auto;
   opacity: 1;
-  transition: height 0.5s ease-in, opacity 0.3s ease-in;
+  transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
+}
+
+@keyframes max-height {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
