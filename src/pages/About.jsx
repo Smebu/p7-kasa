@@ -18,6 +18,7 @@ function About() {
                 title={text.title}
                 key={idx}
                 description={text.description}
+                class="dropdown_container"
               />
             );
           })}

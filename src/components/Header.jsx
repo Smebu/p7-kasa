@@ -7,7 +7,7 @@ function Header() {
       <nav className="navigation">
         <div className="nav_logo">
           <NavLink to="/">
-            <img src="./LOGO.png" alt="logo kasa" />
+            <img src={process.env.PUBLIC_URL + "/LOGO.png"} alt="logo kasa" />
           </NavLink>
         </div>
         <ul className="nav_link">

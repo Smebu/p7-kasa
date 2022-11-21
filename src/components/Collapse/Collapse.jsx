@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import { useState } from "react";
 
 export default function Collapse(props) {
@@ -12,8 +12,8 @@ export default function Collapse(props) {
     } else {
       return (
         <ul>
-          {content.map((item) => (
-            <li className="collapse_list">{item}</li>
+          {content.map((item, idx) => (
+            <li className="collapse_list" key={idx}>{item}</li>
           ))}
         </ul>
       );
@@ -21,11 +21,11 @@ export default function Collapse(props) {
   }
 
   return (
-    <article className="dropdown_container" key={props.idx}>
+    <article className={props.class}>
       <div className="dropdown_trigger" onClick={() => setIsActive(!isActive)}>
         <h2 className="dropdown_title">{props.title}</h2>
         <img
-          src="./vector.png"
+          src={process.env.PUBLIC_URL + "/vector.png"}
           alt="vector"
           className={isActive ? "dropdown_chevron_rotate" : "dropdown_chevron"}
         />
