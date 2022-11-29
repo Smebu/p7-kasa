@@ -15,6 +15,9 @@
   display: flex;
   justify-content: space-between;
 }
+.arrow {
+  margin: 0 25px;
+}
 .arrow:hover {
   cursor: pointer;
   animation: transform 0.3s ease-in forwards;
@@ -120,4 +123,51 @@
 }
 .dropdown_lodgment li {
   font-size: 18px;
+}
+
+/* MediaQueries */
+
+@media all and (max-width: 812px) {
+  .slideshow_container {
+    height: 255px;
+  }
+  .arrow {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+  }
+  .lodgment_body {
+    margin: 30px 10px;
+  }
+  .lodgment_title {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .lodgment_location {
+    font-size: 14px;
+  }
+  .lodgment_tag {
+    font-size: 10px;
+  }
+  .lodgment_wrapper {
+    flex-direction: column;
+  }
+  .lodgment_host {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .lodgment_star {
+    width: 18px;
+    height: 18px;
+  }
+  .lodgment_details {
+    flex-direction: column;
+  }
+  .dropdown_lodgment {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
